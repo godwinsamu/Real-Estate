@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Admin Login</h2>
+    <form id="registration-form">
+      <div>
+        <input type="text" placeholder="Name" id="name">
+        <div class="error-message" id="name-error"></div>
+      </div>
+      <div>
+        <input type="email" placeholder="Email" id="email">
+        <div class="error-message" id="email-error"></div>
+      </div>
+      <div>
+        <input type="password" placeholder="Password" id="password">
+        <div class="error-message" id="password-error"></div>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <h5>If you are User then choose below options accordingly</h5>
+    <div class="links-container">
+      <a href="new-user.html">New User?</a><br>
+      <a href="existing-account.html">Already Existing Account?</a><br>
+      <a href="seller.html">Seller?</a>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

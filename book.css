@@ -1,0 +1,143 @@
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    color: #fff;
+    background: radial-gradient(#000000, #fad0c4, #a1c4fd, #fccb90, #d4fc79);
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s infinite alternate;
+    height: 100vh;
+    max-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .logo{
+    font-size:30px;
+  }
+  /* Navbar Links */
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease; 
+  }
+  
+  .nav-links li {
+    margin: 15px 0;
+    padding: 0; 
+    text-align: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none; 
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    display: block; 
+    padding: 10px 0;
+  }
+  
+  .nav-links a:hover {
+    color: #ff4081; 
+  }
+  
+
+  .nav-active {
+    max-height: 300px; 
+  }
+  
+  /* Burger Menu */
+  .burger {
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+
+  .burger.toggle .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger.toggle .line2 {
+    opacity: 0;
+  }
+  
+  .burger.toggle .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Responsive Navbar: Larger Screens */
+  @media (min-width: 600px) {
+    .burger {
+      display: none; 
+    }
+  
+    .nav-links {
+      display: flex; 
+      position: static;
+      max-height: none;
+      flex-direction: row; 
+      background: transparent;
+      overflow: visible;
+      justify-content: flex-end; 
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin: 0 15px; 
+    }
+  }
+  
+  /* Responsive Navbar: Smaller Screens */
+  @media (max-width: 600px) {
+    .burger {
+      display: block; 
+    }
+  
+    .nav-links {
+      display: block;
+    }
+  }
