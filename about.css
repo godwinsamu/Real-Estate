@@ -10,7 +10,9 @@ body {
     background:#ebebeb;
     background-repeat: no-repeat;
   }
-  
+  ::selection{
+  background:none;
+}
   /* Navbar */
   .navbar {
     display: flex;
