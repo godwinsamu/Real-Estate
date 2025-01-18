@@ -214,6 +214,8 @@ color:yellow;
     padding: 15px;
     background:navy;
   width:100%;
+      position:sticky;
+      bottom:0;
   font-size: 0.9rem;
     color: #fff;
     flex-shrink: 0; /* Prevents footer from shrinking */
