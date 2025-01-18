@@ -25,6 +25,9 @@ color: #fff;
   width: 100%;
   z-index: 1000;
 }
+::selection{
+  background:none;
+}
   .hi{
     width:100%;
     overflow-x: hidden;
