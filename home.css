@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100vh; /* Set height to 100vh */
+  max-height: 100vh; /* Limit to the viewport's height */
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  background:#ebebeb;
+  background-repeat: no-repeat;
+}
+::selection{
+  background:none;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+background: navy;
+    width:100%;
+    color: white;
+  position:fixed;
+  z-index: 1000;
+}
+.logo{
+  font-size:30px;
+}
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right:2rem;
+  display: flex;
+  flex-direction: column; /* Vertical layout for smaller screens */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background:navy;
+  max-height: 0; /* Collapsed state */
+  overflow: hidden; /* Hide overflowing links */
+  transition: max-height 0.5s ease; /* Smooth expansion */
+}
+
+.nav-links li {
+  margin: 15px 0;
+  padding: 0; /* Remove padding */
+  text-align: center;
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove text decoration */
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  display: block; /* Full-width clickable area */
+  padding: 10px 0; /* Padding for better clickable area */
+}
+
+.nav-links a:hover {
+  color: yellow; /* Highlight effect */
+}
+
+/* Active Navbar State */
+.nav-active {
+  max-height: 300px; /* Expand to fit the links */
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color:orange;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Burger Toggle Animation */
+.burger.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Navbar: Larger Screens */
+@media (min-width: 600px) {
+  .burger {
+    display: none; /* Hide burger on larger screens */
+  }
+
+  .nav-links {
+    display: flex; /* Inline for larger screens */
+    position: static;
+    max-height: none;
+    flex-direction: row; /* Horizontal layout */
+    background: transparent;
+    overflow: visible;
+    justify-content: flex-end; /* Align nav links to the right */
+    width: 100%; /* Full width of the navbar */
+  }
+
+  .nav-links li {
+    margin: 0 15px; /* Horizontal spacing for links */
+  }
+}
+
+/* Responsive Navbar: Smaller Screens */
+@media (max-width: 600px) {
+  .burger {
+    display: block; /* Show burger icon */
+    margin-right:6rem;
+
+  }
+
+  .nav-links {
+    display: block;
+  }
+  .nav-links a{
+    color:white;
+  }
+  .nav-links a:hover{
+    color:yellow;
+  }
+}
+/* Hero Section */
+.hero {
+  flex: 1; /* Takes up all available space between header and footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color:navy;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color:black;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e7e7e7;
+  background:orangered;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background:navy;
+}
+@media(max-width:750px){
+  html{
+   overflow-x:hidden;
+  }
+ }
+/* Footer */
+footer {
+  text-align: center;
+  width:100%;
+  padding: 15px;
+  bottom:0;
+  position:fixed;
+  background:navy;
+  font-size: 0.9rem;
+  color: #fff;
+  flex-shrink: 0; /* Prevents footer from shrinking */
+}
