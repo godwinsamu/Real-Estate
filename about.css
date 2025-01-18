@@ -10,9 +10,6 @@ body {
     background:#ebebeb;
     background-repeat: no-repeat;
   }
-  ::selection{
-  background:none;
-}
   /* Navbar */
   .navbar {
     display: flex;
@@ -25,6 +22,9 @@ body {
     position:fixed;
     z-index: 1000;
   }
+  ::selection{
+  background:none;
+}
     .hi{
     width:100%;
     overflow-x: hidden;
