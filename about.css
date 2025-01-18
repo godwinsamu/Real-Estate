@@ -23,7 +23,10 @@ body {
     position:fixed;
     z-index: 1000;
   }
-  
+    .hi{
+    width:100%;
+    overflow-x: hidden;
+  }
   .logo{
     font-size:30px;
   }
