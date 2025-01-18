@@ -15,6 +15,10 @@ body {
 ::selection{
   background:none;
 }
+  .hi{
+    width:100%;
+    overflow-x: hidden;
+  }
 /* Navbar */
 .navbar {
   display: flex;
